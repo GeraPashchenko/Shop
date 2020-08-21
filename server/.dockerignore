@@ -1,0 +1,7 @@
+.idea/
+circle.yml
+docker-compose*.yaml
+Dockerfile
+node_modules
+*.docx
+/readme.txt

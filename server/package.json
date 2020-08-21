@@ -1,0 +1,26 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "shop on node.js + react.js",
+  "main": "app.js",
+  "author": "Heorhii Pashchenko",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js",
+    "docker:start:development": "docker-compose -f docker-compose.develop.yaml up",
+    "docker:stop:development": "docker-compose -f docker-compose.develop.yaml down",
+    "start:prod": "concurrently --kill-others \"node index.js\" \"node Client.js\"",
+    "docker:build": "docker-compose -f docker-compose.yaml -f docker-compose.develop.yaml build",
+    "docker:start": "docker-compose -f docker-compose.yaml -f docker-compose.develop.yaml up --build",
+    "docker:stop": "docker-compose -f docker-compose.yaml -f docker-compose.develop.yaml down"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.0",
+    "mongoose": "^5.9.28",
+    "nodemon": "^2.0.4"
+  }
+}
