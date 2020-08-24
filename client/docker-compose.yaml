@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  webapp:
+    image: client
+    build:
+      context: .
+      args:
+        buildEnv: production
+        buildPath:
+    ports:
+      - 80:80
